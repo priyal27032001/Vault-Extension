@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Vault for Chrome: Settings</title>
+    <script
+      type="application/javascript"
+      src="browser-polyfill.min.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <img src="icons\logo-my.png" style="size:200px;">
+    <main class="main">
+      <div id="notify"></div>
+
+      <div id="loggedIn" style="display: none;">
+        <div id="vaultPolicies"></div>
+        <label class="label login">
+          Vault server token:
+          <input type="text" class="input" name="server" id="vaultToken" disabled />
+        </label>
+        <a href="/popup.html" class="link link--alt login" aria-current="page">Secrets</a>
+      </div>
+
+      <div id="login">
+          <input type="text" class="input" name="server" id="serverBox" placeholder="Vault server URL" />
+
+          <input type="text" class="input" name="login" id="loginBox" placeholder="Username" />
+
+          <input type="password" class="input" name="pass" id="passBox" placeholder=" Password" />
+
+          <input type="text" list="mounts" name="authMount" id="authMount" class="input" placeholder="Auth Mountpoint" />
+          <datalist id="mounts">
+            <option>userpass</option>
+          </datalist>
+        <input
+          type="submit"
+          class="button button--primary center"
+          value="Login to Vault"
+          id="authButton"
+        />
+      </div>
+
+      <div>
+        <ul id="secretList" class="list gutter"></ul>
+      </div>
+
+      <div id="logout" style="display: none;">
+        <input type="submit" class="button center button--primary" value="Logout" id="logoutButton" />
+      </div>
+    </main>
+
+    <script src="Notify.js"></script>
+    <script src="options.js"></script>
+  </body>
+</html>

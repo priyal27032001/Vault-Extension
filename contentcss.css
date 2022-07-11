@@ -1,0 +1,15 @@
+#added-pass{
+    background-color: transparent;
+    border: none;
+    margin-left: -25px;
+}
+#added-user{
+    background-color: transparent;
+    border: none;
+    margin-left: -25px;
+}
+.up-image{
+    position: relative;
+    height: 15px;
+    margin-left: -1px;
+}

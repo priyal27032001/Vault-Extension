@@ -1,0 +1,42 @@
+{
+  "manifest_version": 2,
+  "name": "VaultPass",
+  "description": "A Chrome extension to leverage Hashicorp Vault as Credential Storage",
+  "version": "0.1",
+  "browser_action": {
+    "default_icon": "icons/logo-my.png",
+    "default_popup": "popup.html",
+    "default_title": "VaultPass"
+  },
+  "icons": {
+    "48": "icons/logo-my.png",
+    "128": "icons/logo-my.png"
+  },
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "web_accessible_resources": [
+      "icons/logo-my.png" 
+  ],
+  "content_scripts": [
+    {
+      "run_at": "document_start", 
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["browser-polyfill.min.js","content.js","Notify.js","popup.js"],
+      "css" : ["contentcss.css"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage",
+    "clipboardWrite",
+    "http://*/*",
+    "https://*/*",
+    "debugger"
+  ]
+}
