@@ -78,5 +78,7 @@ b -> sends message to background.js to return the username and password if it ex
 8. https://www.coursera.org/
 9. https://www.udemy.com/
 10. https://login.salesforce.com/
+11. https://github.com/login
+12. https://academic.iitg.ac.in/sso/
 
 
