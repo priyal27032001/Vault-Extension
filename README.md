@@ -81,5 +81,7 @@ b -> sends message to background.js to return the username and password if it ex
 11. https://github.com/login
 12. https://academic.iitg.ac.in/sso/
 13. https://www.instagram.com/accounts/login/
+14. https://login.yahoo.com/
+15. https://nta.ac.in/
 
 
